@@ -238,13 +238,13 @@ $(function(){
             pic: imageData
         }
 
-        $.post('api.php', data, function(response) {
-            if ( response.code === 'success' ) {
-                location.href = 'result.php?token='+response.message;
-            } else {
-                alert(response.message);
-            } 
-        });
+        // $.post('api.php', data, function(response) {
+        //     if ( response.code === 'success' ) {
+        //         location.href = 'result.php?token='+response.message;
+        //     } else {
+        //         alert(response.message);
+        //     } 
+        // });
     });
 
     $('.p7_btn2').click(function() {
@@ -356,7 +356,7 @@ $(function(){
                     }, 500);
                 }
             }
-            images[src].src = img_url+sources[src];
+            images[src].src = sources[src];
         }
     }
 });
