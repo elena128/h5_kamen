@@ -219,56 +219,46 @@ $(function(){
         var imageData = $('.input_b').cropit('export');
         if( !text1 ) {
             alert("请输入你的名字");
+            $('.input1').focus();
             return false;
         }
 
         if( !text2 ) {
             alert("请输入你的最美宣言");
+            $('.input2').focus()
             return false;
         }
 
         if( !imageData ) {
             alert("请上传照片");
             return false;
+        }else{
+            $(".page9").show().find(".p9_img img").attr("src",imageData);
+            $(".p9_name").text(text1)
+            $(".p9_title").text(text2)
         }
-
-        var data = {
-            text1: text1,
-            text2: text2,
-            pic: imageData
-        }
-
-        // $.post('api.php', data, function(response) {
-        //     if ( response.code === 'success' ) {
-        //         location.href = 'result.php?token='+response.message;
-        //     } else {
-        //         alert(response.message);
-        //     } 
-        // });
     });
 
     $('.p7_btn2').click(function() {
         var imageData = $('.input_b').cropit('export');
-
         if( !imageData ) {
             alert("想要占座，文字可以不填，图片还是要上传的哦~");
             return false;
+        }else{
+            $(".page9").show().find(".upimg").attr("src",imageData);
+            $(".hastext,.notext").toggle()
         }
-
-        var data = {
-            text1: "",
-            text2: "",
-            pic: imageData
-        }
-
-        $.post('api.php', data, function(response) {
-            if ( response.code === 'success' ) {
-                location.href = 'result.php?token='+response.message;
-            } else {
-                alert(response.message);
-            } 
-        });
     });
+
+    $(".p9_btn1,.p9_btn3").click(function(){
+        $(".share").show()
+    });
+
+    $(".share").click(function(event){
+        if(event.target == this){
+            $(this).hide()
+        }
+    })
 
     function changePic(page){
         $(".p"+page+"_slide2").fadeIn(2000);
