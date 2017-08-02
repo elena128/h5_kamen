@@ -119,7 +119,7 @@ a{color: #fff;text-decoration: none;}
 .p7_btn1{width: 100%;height: 40px;background: url(../img/p7_btn1.png) no-repeat;background-size: 100%;}
 .p7_btn2{width: 100%;height: 40px;margin-top:5px;background: url(../img/p7_btn2.png) no-repeat;background-size: 100%;}
 
-.page9{display: block}
+/* .page9{display: block} */
 .page9_bg{background: url(../img/p6.jpg) no-repeat;background-size: 100% 100%;display:none;}
 .p9_word{bottom:0;height: 53px;background: url(../img/p8_word.png) no-repeat;background-size: 100%;-webkit-animation-delay:3s;}
 .p9_bg{background: url(../img/p0.png) no-repeat;background-size: 100% 100%;}
