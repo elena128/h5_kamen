@@ -110,7 +110,11 @@ $(function(){
             },0)
         }
     }, $(".loading_progress"));
-
+    
+    $(window).touchstart(function(){
+        $("video")[0].play();
+    })
+    
     $(".start").click(function () {
         $(".start").hide();
         $(".close").show();
