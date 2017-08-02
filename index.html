@@ -13,7 +13,7 @@
     <script src="js/kamen.js?hh"></script>
 </head>
 <body>
-    <audio id="sound" src="audio/bg_music3.mp3"></audio>
+    <audio id="sound" src="audio/bg_music3.mp3" loop></audio>
     <div class="loading">
         <div class="loading_progress"></div>
         <div class="loading_word animated bounceIn"></div>
@@ -153,26 +153,27 @@
                 <div class="p7_btn2"></div>
             </div>
         </div>
-        <div class="page page9" style="display:none;">
-            <div class="p_video video_full_screen" style="display:none;">
-                <video id="video0" data-index="0" poster="img/video.jpg" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="http://fun-x.b0.upaiyun.com/kamen/video/1.mp4" autoplay loop></video>
+        <div class="page page9 hide">
+            <div class="p_video video_full_screen">
+                <video id="video0" data-index="0" poster="img/video.jpg" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="video/1.mp4" autoplay loop></video>
             </div>
             <div class="p_element page9_bg"></div>
             <div class="p_element p9_bg"></div>
-            <div class="p_element p9_nickname animated bounceInDown">“<?php echo $row['nickname'] ?: '-'; ?>”</div>
+            <div class="p_element p9_nickname animated bounceInDown">“昵称”</div>
             <div class='p_element p9_mytitle animated bounceInDown'>这是我的武汉造</div>
             <div class="p_element p9_img">
-                <img src="<?php echo $row['pic']; ?>" width="240px" height="312px">
-                <!-- text1 exits -->
-                <div class='p_element p9_tab1'>我是<span class='p9_name'>{$row['text1']}</span>，</div><div class='p_element p9_tab2'>我让#<span class='p9_title'>{$row['text2']}</span>，<span class='wuhan'></span><span style='margin-left:53px'>#</span><div class='logo_icon'></div></div>";
-                <div class='p_element share p9_btn p9_btn2 animated bounceIn'></div>
-                <div class='p_element noshare p9_btn p9_btn1 animated bounceIn'></div>
-                <!-- text1 not exits -->
-                <div class='p_element p9_tab1' style='width:30%;padding-left:5px;font-size:18px;''>别理我，</div><div class='p_element p9_tab2' style='padding-left:5px;font-size:18px;''>我就静静抢个座<div class='logo_icon'></div></div>
-                <div class='p_element share p9_btn p9_btn3 animated bounceIn'></div>
-                <div class='p_element noshare p9_btn p9_btn1 animated bounceIn'></div>
+                <img class="upimg" src="img/share.jpg" width="240px" height="312px">
+                <div class="hastext">
+                    <div class='p_element p9_tab1'>我是<span class='p9_name'></span>，</div>
+                    <div class='p_element p9_tab2'>我让#<span class='p9_title'></span>，<span class='wuhan'></span><span style='margin-left:53px'>#</span><div class='logo_icon'></div></div>
+                    <div class='p_element p9_btn p9_btn1 animated bounceIn'></div>
+                </div>
+                <div class="notext hide">
+                    <div class='p_element p9_tab1' style='width:30%;padding-left:5px;font-size:18px;''>别理我，</div><div class='p_element p9_tab2' style='padding-left:5px;font-size:18px;''>我就静静抢个座<div class='logo_icon'></div></div>
+                    <div class='p_element p9_btn p9_btn3 animated bounceIn'></div>
+                </div>
+                <!-- <div class='p_element p9_btn p9_btn2 animated bounceIn'></div> -->
             </div>
-            <!-- text1 exits and noshare -->
             <div class='p_element p9_word animated fadeInUp'></div>
         </div>
         <div class="page go_share"></div>
