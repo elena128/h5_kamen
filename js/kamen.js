@@ -111,7 +111,7 @@ $(function(){
         }
     }, $(".loading_progress"));
     
-    $(window).touchstart(function(){
+    $(window).on("touchstart",function(){
         $("video")[0].play();
     })
     
